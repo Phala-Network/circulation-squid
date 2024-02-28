@@ -1,0 +1,34 @@
+{
+  "name": "pha-circulation-squid",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf lib && tsc -p tsconfig.build.json",
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "@subsquid/archive-registry": "^3.3.0",
+    "@subsquid/big-decimal": "^1.0.0",
+    "@subsquid/graphql-server": "^4.5.0",
+    "@subsquid/ss58": "^2.0.2",
+    "@subsquid/substrate-processor": "^8.2.0",
+    "@subsquid/typeorm-migration": "^1.3.0",
+    "@subsquid/typeorm-store": "^1.2.6",
+    "date-fns": "^3.3.1",
+    "dotenv": "^16.4.5",
+    "lodash": "^4.17.21",
+    "patch-package": "^8.0.0",
+    "pg": "^8.11.3",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "nightly",
+    "@subsquid/substrate-typegen": "^8.0.2",
+    "@subsquid/typeorm-codegen": "^1.3.3",
+    "@types/bun": "latest",
+    "@types/lodash": "^4.14.202",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

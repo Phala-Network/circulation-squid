@@ -1,0 +1,23 @@
+type Circulation @entity {
+  id: ID!
+  blockHeight: Int!
+  timestamp: DateTime!
+  crowdloan: BigDecimal!
+  reward: BigDecimal!
+  chainBridge: BigDecimal!
+  sygmaBridge: BigDecimal!
+  totalIssuance: BigDecimal!
+  circulation: BigDecimal!
+}
+
+type Snapshot @entity {
+  id: ID!
+  blockHeight: Int! @index
+  timestamp: DateTime! @index @unique
+  crowdloan: BigDecimal!
+  reward: BigDecimal!
+  chainBridge: BigDecimal!
+  sygmaBridge: BigDecimal!
+  totalIssuance: BigDecimal!
+  circulation: BigDecimal!
+}

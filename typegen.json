@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/subsquid/squid-sdk/master/substrate/substrate-typegen/src/config.schema.json",
+  "outDir": "src/types",
+  "specVersions": "https://v2.archive.subsquid.io/metadata/phala",
+  "pallets": {
+    "System": {
+      "storage": ["Account"]
+    },
+    "Balances": {
+      "storage": ["TotalIssuance"]
+    }
+  }
+}
