@@ -16,7 +16,7 @@ export const processor = new SubstrateBatchProcessor()
   .includeAllBlocks()
   // Lookup archive by the network name in Subsquid registry
   // See https://docs.subsquid.io/substrate-indexing/supported-networks/
-  .setGateway(lookupArchive('phala', {release: 'ArrowSquid'}))
+  .setGateway(lookupArchive('khala', {release: 'ArrowSquid'}))
   // Chain RPC endpoint is required on Substrate for metadata and real-time updates
   .setRpcEndpoint({
     // Set via .env for local runs or via secrets when deploying to Subsquid Cloud

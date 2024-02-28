@@ -29,8 +29,8 @@ const toBalance = (x: bigint) => BigDecimal(x.toString()).div(1e12)
 
 const fetchCirculation = async (block: Block) => {
   let balanceData: bigint[]
-  if (system.account.v1090.is(block)) {
-    balanceData = (await system.account.v1090.getMany(block, keys)).map(
+  if (system.account.v1.is(block)) {
+    balanceData = (await system.account.v1.getMany(block, keys)).map(
       (x) => x?.data.free ?? 0n,
     )
   } else if (system.account.v1250.is(block)) {
@@ -41,8 +41,8 @@ const fetchCirculation = async (block: Block) => {
     throw new Error('Unsupported version')
   }
   let totalIssuance: bigint
-  if (balances.totalIssuance.v1090.is(block)) {
-    totalIssuance = (await balances.totalIssuance.v1090.get(block)) ?? 0n
+  if (balances.totalIssuance.v1.is(block)) {
+    totalIssuance = (await balances.totalIssuance.v1.get(block)) ?? 0n
   } else {
     throw new Error('Unsupported version')
   }
